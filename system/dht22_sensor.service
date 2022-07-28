@@ -1,0 +1,11 @@
+[Unit]
+Description=DHT22 Sensor
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python /home/alberto/dht22sensor/dht22_sensor.py
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
